@@ -2,9 +2,9 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Polityka prywatności – Wawero</title>
+  <title>Wawero – Polityka prywatności i Regulamin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Polityka prywatności aplikacji Wawero – anonimowe wiadomości z moderacją. Dowiedz się, jak dbamy o Twoje dane i bezpieczeństwo." />
+  <meta name="description" content="Polityka prywatności i Regulamin aplikacji Wawero – anonimowe wiadomości z moderacją. Dowiedz się, jak dbamy o Twoje dane, zasady korzystania i bezpieczeństwo." />
   <style>
     :root {
       --bg: #050816;
@@ -83,7 +83,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .brand {
@@ -128,6 +128,48 @@
       color: #c7d2fe;
       white-space: nowrap;
     }
+
+    /* TABS */
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+      margin-top: 4px;
+    }
+
+    .tab-button {
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
+    }
+
+    .tab-button:hover {
+      border-color: rgba(129, 140, 248, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .tab-button.active {
+      background: rgba(99, 102, 241, 0.18);
+      border-color: rgba(129, 140, 248, 0.95);
+      color: #e0e7ff;
+    }
+
+    .tab-content {
+      margin-top: 6px;
+    }
+
+    .tab-content.hidden {
+      display: none;
+    }
+
+    /* CONTENT */
 
     .hero {
       margin-bottom: 18px;
@@ -270,207 +312,482 @@
         <div class="logo">W</div>
         <div>
           <div class="brand-text-title">Wawero – anonimowe wiadomości</div>
-          <div class="brand-text-sub">Oficjalna polityka prywatności aplikacji</div>
+          <div class="brand-text-sub">Oficjalna polityka prywatności i regulamin aplikacji</div>
         </div>
       </div>
-      <div class="badge">Polityka prywatności</div>
+      <div class="badge" id="badge-label">Polityka prywatności</div>
     </header>
 
-    <section class="hero">
-      <h1 class="hero-title">Jak dbamy o Twoje dane i bezpieczeństwo w aplikacji Wawero</h1>
-      <p class="hero-sub">
-        Ten dokument wyjaśnia, jakie dane przetwarzamy w aplikacji Wawero, w jakim celu
-        to robimy oraz jakie prawa przysługują Ci jako użytkownikowi.
-      </p>
-      <div class="chip-row">
-        <div class="chip">RODO / GDPR</div>
-        <div class="chip">Google Play User Data</div>
-        <div class="chip">Anonimowe wiadomości z moderacją</div>
-      </div>
+    <!-- PRZEŁĄCZNIKI -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="tab-privacy">Polityka prywatności</button>
+      <button class="tab-button" data-tab="tab-terms">Regulamin</button>
+    </div>
+
+    <!-- ZAKŁADKA: POLITYKA PRYWATNOŚCI -->
+    <section class="tab-content" id="tab-privacy">
+      <section class="hero">
+        <h1 class="hero-title">Jak dbamy o Twoje dane i bezpieczeństwo w aplikacji Wawero</h1>
+        <p class="hero-sub">
+          Ten dokument wyjaśnia, jakie dane przetwarzamy w aplikacji Wawero, w jakim celu
+          to robimy oraz jakie prawa przysługują Ci jako użytkownikowi.
+        </p>
+        <div class="chip-row">
+          <div class="chip">RODO / GDPR</div>
+          <div class="chip">Google Play User Data</div>
+          <div class="chip">Anonimowe wiadomości z moderacją</div>
+        </div>
+      </section>
+
+      <section class="content-card">
+        <div class="section">
+          <h2>1. Postanowienia ogólne</h2>
+          <p>
+            Niniejsza polityka prywatności (dalej: „Polityka”) określa zasady przetwarzania
+            danych użytkowników aplikacji mobilnej <strong>Wawero – anonimowe wiadomości</strong>
+            (dalej: „Aplikacja”). Dokument ma na celu wyjaśnienie, jakie dane mogą być
+            przetwarzane, w jakim celu oraz jakie prawa przysługują Ci w związku z korzystaniem
+            z Aplikacji.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>2. Administrator danych</h2>
+          <p>
+            Administratorem danych osobowych przetwarzanych w związku z korzystaniem z Aplikacji
+            jest właściciel Aplikacji „Wawero”. W sprawach związanych z ochroną danych osobowych
+            oraz prywatnością możesz skontaktować się z nami pod adresem e-mail:
+            <strong>swarszawa06@gmail.com</strong>.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>3. Zakres przetwarzanych danych</h2>
+          <p>
+            W związku z korzystaniem z Aplikacji możemy przetwarzać w szczególności następujące dane:
+          </p>
+          <ul>
+            <li>
+              <strong>Treści wiadomości</strong> – anonimowe treści wysyłane i publikowane
+              w Aplikacji (wiadomości typu „spotted” itp.).
+            </li>
+            <li>
+              <strong>Dane techniczne</strong> – informacje związane z urządzeniem i korzystaniem
+              z Aplikacji, takie jak anonimowe identyfikatory techniczne (np. identyfikator
+              użytkownika, identyfikator urządzenia lub token), czas korzystania, podstawowe logi
+              błędów.
+            </li>
+            <li>
+              <strong>Dane zgłoszeń</strong> – informacje przekazywane przez Ciebie w ramach
+              zgłoszeń nadużyć, próśb o usunięcie treści lub kontaktu z nami (np. adres e-mail,
+              treść zgłoszenia).
+            </li>
+          </ul>
+          <p class="muted">
+            W Aplikacji nie wymagamy podawania imienia i nazwiska, a publikowane treści są
+            anonimowe z perspektywy innych użytkowników.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>4. Cele i podstawa przetwarzania danych</h2>
+          <p>
+            Dane przetwarzamy wyłącznie w zakresie niezbędnym do prawidłowego działania Aplikacji
+            oraz zapewnienia bezpieczeństwa użytkownikom. W szczególności:
+          </p>
+          <ul>
+            <li>
+              <strong>Zapewnienie działania Aplikacji</strong> – obsługa anonimowych wiadomości,
+              wyświetlanie treści i podstawowe funkcjonalności Aplikacji
+              (art. 6 ust. 1 lit. b RODO – wykonanie umowy / świadczenie usługi).
+            </li>
+            <li>
+              <strong>Moderacja treści i zapobieganie nadużyciom</strong> – weryfikacja wiadomości
+              przed publikacją, filtrowanie treści naruszających prawo lub zasady społeczności,
+              reagowanie na zgłoszenia (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes
+              administratora polegający na zapewnieniu bezpieczeństwa i porządku w Aplikacji).
+            </li>
+            <li>
+              <strong>Utrzymanie bezpieczeństwa technicznego i diagnostyka</strong> – analiza błędów,
+              poprawa stabilności i działania Aplikacji (art. 6 ust. 1 lit. f RODO).
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>5. Moderacja treści i bezpieczeństwo</h2>
+          <p>
+            Ze względu na anonimowy charakter wiadomości w Aplikacji Wawero szczególny nacisk
+            kładziemy na bezpieczeństwo i ograniczenie ryzyka nadużyć. W szczególności:
+          </p>
+          <ul>
+            <li>
+              wiadomości mogą być <strong>weryfikowane i zatwierdzane przez administratora</strong>
+              przed publikacją;
+            </li>
+            <li>
+              treści naruszające prawo, dobre obyczaje, zasady współżycia społecznego lub
+              regulamin Aplikacji nie będą publikowane;
+            </li>
+            <li>
+              przewidziana jest możliwość <strong>zgłaszania treści</strong> przez użytkowników
+              oraz ich usuwania po weryfikacji;
+            </li>
+            <li>
+              w uzasadnionych przypadkach możemy blokować korzystanie z Aplikacji z określonego
+              urządzenia lub konta technicznego (np. w razie powtarzających się nadużyć).
+            </li>
+          </ul>
+          <p class="muted">
+            Aplikacja nie jest przeznaczona do szerzenia nienawiści, gróźb, nękania ani innych
+            form przemocy słownej. Takie treści będą usuwane.
+            <span class="inline-tag">bezpieczeństwo społeczności</span>
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>6. Okres przechowywania danych</h2>
+          <p>
+            Dane przechowujemy jedynie przez okres niezbędny do realizacji celów wskazanych
+            w niniejszej Polityce, tj.:
+          </p>
+          <ul>
+            <li>
+              anonimowe treści wiadomości – tak długo, jak są one dostępne w Aplikacji lub do czasu
+              ich usunięcia przez administratora;
+            </li>
+            <li>
+              dane techniczne i logi – przez okres konieczny do zapewnienia bezpieczeństwa
+              i diagnostyki Aplikacji (zwykle do kilku miesięcy);
+            </li>
+            <li>
+              dane związane ze zgłoszeniami – przez okres niezbędny do obsługi zgłoszenia
+              i ewentualnej ochrony przed roszczeniami.
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>7. Udostępnianie danych</h2>
+          <p>
+            Twoje dane nie są sprzedawane ani odsprzedawane osobom trzecim. Dane mogą być
+            przekazywane wyłącznie:
+          </p>
+          <ul>
+            <li>
+              podmiotom świadczącym usługi hostingowe lub techniczne na rzecz Aplikacji
+              (np. serwery, infrastruktura chmurowa) – wyłącznie w zakresie niezbędnym
+              do działania Aplikacji;
+            </li>
+            <li>
+              organom uprawnionym na mocy prawa – wyłącznie w przypadkach przewidzianych
+              przepisami (np. na podstawie prawomocnego nakazu).
+            </li>
+          </ul>
+          <p class="muted">
+            Jeśli w przyszłości do Aplikacji zostaną dodane zewnętrzne narzędzia (np. analityka
+            czy reklamy), Polityka może zostać zaktualizowana, a informacje o takich narzędziach
+            zostaną tutaj wyraźnie wskazane.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>8. Twoje prawa</h2>
+          <p>
+            W związku z przetwarzaniem danych osobowych przysługują Ci m.in. następujące prawa:
+          </p>
+          <ul>
+            <li>prawo dostępu do swoich danych osobowych oraz uzyskania ich kopii,</li>
+            <li>prawo do sprostowania (poprawienia) danych,</li>
+            <li>prawo do żądania usunięcia danych („prawo do bycia zapomnianym”),</li>
+            <li>prawo do ograniczenia przetwarzania danych,</li>
+            <li>prawo wniesienia sprzeciwu wobec przetwarzania danych,</li>
+            <li>
+              prawo wniesienia skargi do organu nadzorczego (Prezesa Urzędu Ochrony Danych
+              Osobowych), jeśli uznasz, że Twoje dane są przetwarzane niezgodnie z prawem.
+            </li>
+          </ul>
+          <p class="muted">
+            W celu realizacji swoich praw możesz skontaktować się z nami pod adresem:
+            <strong>swarszawa06@gmail.com</strong>.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>9. Zmiany Polityki prywatności</h2>
+          <p>
+            Polityka prywatności może być okresowo aktualizowana, w szczególności w przypadku
+            zmian w Aplikacji, zmian przepisów prawa lub wytycznych platformy Google Play.
+            Aktualna wersja Polityki jest zawsze dostępna pod tym adresem internetowym.
+          </p>
+        </div>
+      </section>
     </section>
 
-    <section class="content-card">
-      <div class="section">
-        <h2>1. Postanowienia ogólne</h2>
-        <p>
-          Niniejsza polityka prywatności (dalej: „Polityka”) określa zasady przetwarzania
-          danych użytkowników aplikacji mobilnej <strong>Wawero – anonimowe wiadomości</strong>
-          (dalej: „Aplikacja”). Dokument ma na celu wyjaśnienie, jakie dane mogą być
-          przetwarzane, w jakim celu oraz jakie prawa przysługują Ci w związku z korzystaniem
-          z Aplikacji.
+    <!-- ZAKŁADKA: REGULAMIN -->
+    <section class="tab-content hidden" id="tab-terms">
+      <section class="hero">
+        <h1 class="hero-title">Regulamin korzystania z aplikacji Wawero</h1>
+        <p class="hero-sub">
+          Ten regulamin określa zasady korzystania z aplikacji Wawero – anonimowe wiadomości,
+          w tym podstawowe obowiązki użytkowników oraz zasady odpowiedzialności.
         </p>
-      </div>
+        <div class="chip-row">
+          <div class="chip">Zasady społeczności</div>
+          <div class="chip">Anonimowe wiadomości</div>
+          <div class="chip">Bezpieczeństwo użytkowników</div>
+        </div>
+      </section>
 
-      <div class="section">
-        <h2>2. Administrator danych</h2>
-        <p>
-          Administratorem danych osobowych przetwarzanych w związku z korzystaniem z Aplikacji
-          jest właściciel Aplikacji „Wawero”. W sprawach związanych z ochroną danych osobowych
-          oraz prywatnością możesz skontaktować się z nami pod adresem e-mail:
-          <strong>swarszawa06@gmail.com</strong>.
-        </p>
-      </div>
+      <section class="content-card">
+        <div class="section">
+          <h2>1. Postanowienia ogólne</h2>
+          <p>
+            Niniejszy regulamin (dalej: „Regulamin”) określa zasady korzystania z aplikacji
+            mobilnej <strong>Wawero – anonimowe wiadomości</strong> (dalej: „Aplikacja”),
+            w tym prawa i obowiązki użytkowników oraz zasady odpowiedzialności.
+          </p>
+          <p class="muted">
+            Korzystając z Aplikacji, akceptujesz postanowienia niniejszego Regulaminu oraz
+            Polityki prywatności. Jeżeli nie akceptujesz Regulaminu, nie powinieneś korzystać
+            z Aplikacji.
+          </p>
+        </div>
 
-      <div class="section">
-        <h2>3. Zakres przetwarzanych danych</h2>
-        <p>
-          W związku z korzystaniem z Aplikacji możemy przetwarzać w szczególności następujące dane:
-        </p>
-        <ul>
-          <li>
-            <strong>Treści wiadomości</strong> – anonimowe treści wysyłane i publikowane
-            w Aplikacji (wiadomości typu „spotted” itp.).
-          </li>
-          <li>
-            <strong>Dane techniczne</strong> – informacje związane z urządzeniem i korzystaniem
-            z Aplikacji, takie jak anonimowe identyfikatory techniczne (np. identyfikator
-            użytkownika, identyfikator urządzenia lub token), czas korzystania, podstawowe logi
-            błędów.
-          </li>
-          <li>
-            <strong>Dane zgłoszeń</strong> – informacje przekazywane przez Ciebie w ramach
-            zgłoszeń nadużyć, próśb o usunięcie treści lub kontaktu z nami (np. adres e-mail,
-            treść zgłoszenia).
-          </li>
-        </ul>
-        <p class="muted">
-          W Aplikacji nie wymagamy podawania imienia i nazwiska, a publikowane treści są
-          anonimowe z perspektywy innych użytkowników.
-        </p>
-      </div>
+        <div class="section">
+          <h2>2. Definicje</h2>
+          <p>Na potrzeby Regulaminu:</p>
+          <ul>
+            <li>
+              <strong>Aplikacja</strong> – aplikacja mobilna „Wawero – anonimowe wiadomości”
+              umożliwiająca publikowanie i przeglądanie anonimowych treści (np. typu „spotted”).
+            </li>
+            <li>
+              <strong>Użytkownik</strong> – każda osoba korzystająca z Aplikacji.
+            </li>
+            <li>
+              <strong>Wiadomość</strong> – anonimowa treść tekstowa opublikowana w Aplikacji
+              przez Użytkownika.
+            </li>
+            <li>
+              <strong>Administrator</strong> – właściciel Aplikacji Wawero, zarządzający jej
+              funkcjonowaniem i treściami.
+            </li>
+          </ul>
+        </div>
 
-      <div class="section">
-        <h2>4. Cele i podstawa przetwarzania danych</h2>
-        <p>
-          Dane przetwarzamy wyłącznie w zakresie niezbędnym do prawidłowego działania Aplikacji
-          oraz zapewnienia bezpieczeństwa użytkownikom. W szczególności:
-        </p>
-        <ul>
-          <li>
-            <strong>Zapewnienie działania Aplikacji</strong> – obsługa anonimowych wiadomości,
-            wyświetlanie treści i podstawowe funkcjonalności Aplikacji
-            (art. 6 ust. 1 lit. b RODO – wykonanie umowy / świadczenie usługi).
-          </li>
-          <li>
-            <strong>Moderacja treści i zapobieganie nadużyciom</strong> – weryfikacja wiadomości
-            przed publikacją, filtrowanie treści naruszających prawo lub zasady społeczności,
-            reagowanie na zgłoszenia (art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes
-            administratora polegający na zapewnieniu bezpieczeństwa i porządku w Aplikacji).
-          </li>
-          <li>
-            <strong>Utrzymanie bezpieczeństwa technicznego i diagnostyka</strong> – analiza błędów,
-            poprawa stabilności i działania Aplikacji (art. 6 ust. 1 lit. f RODO).
-          </li>
-        </ul>
-      </div>
+        <div class="section">
+          <h2>3. Warunki korzystania z Aplikacji</h2>
+          <ul>
+            <li>
+              Korzystanie z Aplikacji jest dobrowolne i co do zasady bezpłatne (z zastrzeżeniem
+              ewentualnych funkcji płatnych w przyszłości).
+            </li>
+            <li>
+              Aplikacja przeznaczona jest dla osób, które ukończyły
+              <strong>co najmniej 16 lat</strong>. Korzystając z Aplikacji, oświadczasz, że
+              spełniasz ten warunek.
+            </li>
+            <li>
+              Aplikacja umożliwia przeglądanie oraz publikowanie anonimowych wiadomości
+              zgodnie z niniejszym Regulaminem.
+            </li>
+            <li>
+              Do korzystania z Aplikacji wymagane jest urządzenie mobilne z systemem
+              Android/iOS oraz dostęp do Internetu.
+            </li>
+          </ul>
+        </div>
 
-      <div class="section">
-        <h2>5. Moderacja treści i bezpieczeństwo</h2>
-        <p>
-          Ze względu na anonimowy charakter wiadomości w Aplikacji Wawero szczególny nacisk
-          kładziemy na bezpieczeństwo i ograniczenie ryzyka nadużyć. W szczególności:
-        </p>
-        <ul>
-          <li>
-            wiadomości mogą być <strong>weryfikowane i zatwierdzane przez administratora</strong>
-            przed publikacją;
-          </li>
-          <li>
-            treści naruszające prawo, dobre obyczaje, zasady współżycia społecznego lub
-            regulamin Aplikacji nie będą publikowane;
-          </li>
-          <li>
-            przewidziana jest możliwość <strong>zgłaszania treści</strong> przez użytkowników
-            oraz ich usuwania po weryfikacji;
-          </li>
-          <li>
-            w uzasadnionych przypadkach możemy blokować korzystanie z Aplikacji z określonego
-            urządzenia lub konta technicznego (np. w razie powtarzających się nadużyć).
-          </li>
-        </ul>
-        <p class="muted">
-          Aplikacja nie jest przeznaczona do szerzenia nienawiści, gróźb, nękania ani innych
-          form przemocy słownej. Takie treści będą usuwane.
-          <span class="inline-tag">bezpieczeństwo społeczności</span>
-        </p>
-      </div>
+        <div class="section">
+          <h2>4. Zasady publikowania treści</h2>
+          <p>
+            Użytkownik jest zobowiązany do korzystania z Aplikacji w sposób zgodny z prawem,
+            dobrymi obyczajami i przeznaczeniem Aplikacji. W szczególności:
+          </p>
+          <ul>
+            <li>
+              publikowane wiadomości powinny być utrzymane w kulturalnym tonie i nie naruszać
+              dóbr osobistych innych osób;
+            </li>
+            <li>
+              niedozwolone jest publikowanie treści umożliwiających bezpośrednią identyfikację
+              konkretnych osób (np. danych osobowych, adresów, numerów telefonów), chyba że
+              masz ich wyraźną zgodę i nie narusza to ich prywatności;
+            </li>
+            <li>
+              Użytkownik ponosi odpowiedzialność za treści, które publikuje w Aplikacji;
+            </li>
+            <li>
+              Administrator może usuwać lub nie publikować wiadomości naruszających Regulamin
+              lub prawo.
+            </li>
+          </ul>
+        </div>
 
-      <div class="section">
-        <h2>6. Okres przechowywania danych</h2>
-        <p>
-          Dane przechowujemy jedynie przez okres niezbędny do realizacji celów wskazanych
-          w niniejszej Polityce, tj.:
-        </p>
-        <ul>
-          <li>
-            anonimowe treści wiadomości – tak długo, jak są one dostępne w Aplikacji lub do czasu
-            ich usunięcia przez administratora;
-          </li>
-          <li>
-            dane techniczne i logi – przez okres konieczny do zapewnienia bezpieczeństwa
-            i diagnostyki Aplikacji (zwykle do kilku miesięcy);
-          </li>
-          <li>
-            dane związane ze zgłoszeniami – przez okres niezbędny do obsługi zgłoszenia
-            i ewentualnej ochrony przed roszczeniami.
-          </li>
-        </ul>
-      </div>
+        <div class="section">
+          <h2>5. Treści niedozwolone</h2>
+          <p>
+            Zabronione jest publikowanie w Aplikacji w szczególności treści, które:
+          </p>
+          <ul>
+            <li>naruszają prawo, w tym przepisy dotyczące ochrony dóbr osobistych i prywatności,</li>
+            <li>zawierają groźby, nawołują do przemocy lub nienawiści,</li>
+            <li>mają charakter wulgarny, obraźliwy, nękający (hejt, stalking),</li>
+            <li>
+              zawierają treści dyskryminujące m.in. ze względu na płeć, rasę, pochodzenie,
+              orientację seksualną, wyznanie lub bezwyznaniowość,
+            </li>
+            <li>
+              zawierają pornografię, treści o charakterze seksualnym, w szczególności w
+              odniesieniu do małoletnich,
+            </li>
+            <li>
+              promują samookaleczenia, samobójstwo lub szkodliwe zachowania,
+            </li>
+            <li>
+              zawierają dane osobowe lub informacje pozwalające zidentyfikować daną osobę
+              bez jej zgody (np. pełne imię i nazwisko, adres zamieszkania, numer telefonu,
+              linki do profili społecznościowych),
+            </li>
+            <li>
+              promują spam, reklamy, treści komercyjne nieuzgodnione z Administratorem.
+            </li>
+          </ul>
+          <p class="muted">
+            Treści naruszające powyższe zasady mogą być usuwane, a dostęp do Aplikacji dla
+            danego urządzenia lub Użytkownika może zostać ograniczony lub zablokowany.
+          </p>
+        </div>
 
-      <div class="section">
-        <h2>7. Udostępnianie danych</h2>
-        <p>
-          Twoje dane nie są sprzedawane ani odsprzedawane osobom trzecim. Dane mogą być
-          przekazywane wyłącznie:
-        </p>
-        <ul>
-          <li>
-            podmiotom świadczącym usługi hostingowe lub techniczne na rzecz Aplikacji
-            (np. serwery, infrastruktura chmurowa) – wyłącznie w zakresie niezbędnym
-            do działania Aplikacji;
-          </li>
-          <li>
-            organom uprawnionym na mocy prawa – wyłącznie w przypadkach przewidzianych
-            przepisami (np. na podstawie prawomocnego nakazu).
-          </li>
-        </ul>
-        <p class="muted">
-          Jeśli w przyszłości do Aplikacji zostaną dodane zewnętrzne narzędzia (np. analityka
-          czy reklamy), Polityka może zostać zaktualizowana, a informacje o takich narzędziach
-          zostaną tutaj wyraźnie wskazane.
-        </p>
-      </div>
+        <div class="section">
+          <h2>6. Moderacja i zgłaszanie naruszeń</h2>
+          <ul>
+            <li>
+              Aplikacja może wykorzystywać mechanizmy moderacji ręcznej lub automatycznej,
+              a wiadomości mogą być weryfikowane przed publikacją.
+            </li>
+            <li>
+              Administrator zastrzega sobie prawo do odmowy publikacji lub usunięcia każdej
+              wiadomości, która w jego ocenie narusza Regulamin, prawo lub zasady społeczności.
+            </li>
+            <li>
+              Użytkownicy mogą zgłaszać treści, które uważają za nieodpowiednie lub naruszające
+              prawo. Zgłoszenia będą rozpatrywane w rozsądnym terminie.
+            </li>
+            <li>
+              W przypadku rażących lub powtarzających się naruszeń, Administrator może zablokować
+              możliwość korzystania z Aplikacji z konkretnego urządzenia lub identyfikatora
+              technicznego.
+            </li>
+          </ul>
+        </div>
 
-      <div class="section">
-        <h2>8. Twoje prawa</h2>
-        <p>
-          W związku z przetwarzaniem danych osobowych przysługują Ci m.in. następujące prawa:
-        </p>
-        <ul>
-          <li>prawo dostępu do swoich danych osobowych oraz uzyskania ich kopii,</li>
-          <li>prawo do sprostowania (poprawienia) danych,</li>
-          <li>prawo do żądania usunięcia danych („prawo do bycia zapomnianym”),</li>
-          <li>prawo do ograniczenia przetwarzania danych,</li>
-          <li>prawo wniesienia sprzeciwu wobec przetwarzania danych,</li>
-          <li>
-            prawo wniesienia skargi do organu nadzorczego (Prezesa Urzędu Ochrony Danych
-            Osobowych), jeśli uznasz, że Twoje dane są przetwarzane niezgodnie z prawem.
-          </li>
-        </ul>
-        <p class="muted">
-          W celu realizacji swoich praw możesz skontaktować się z nami pod adresem:
-          <strong>swarszawa06@gmail.com</strong>.
-        </p>
-      </div>
+        <div class="section">
+          <h2>7. Odpowiedzialność</h2>
+          <ul>
+            <li>
+              Użytkownik ponosi pełną odpowiedzialność za treści, które publikuje lub przesyła
+              za pośrednictwem Aplikacji.
+            </li>
+            <li>
+              Administrator dokłada starań, aby Aplikacja działała w sposób ciągły i bezpieczny,
+              jednak nie gwarantuje nieprzerwanej dostępności ani braku błędów.
+            </li>
+            <li>
+              Administrator nie ponosi odpowiedzialności za:
+              <ul>
+                <li>treści publikowane przez Użytkowników,</li>
+                <li>
+                  szkody wynikające z korzystania z Aplikacji w sposób sprzeczny z prawem
+                  lub Regulaminem,
+                </li>
+                <li>
+                  przerwy w działaniu Aplikacji spowodowane przyczynami technicznymi lub
+                  niezależnymi (np. awarie, działania osób trzecich).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
-      <div class="section">
-        <h2>9. Zmiany Polityki prywatności</h2>
-        <p>
-          Polityka prywatności może być okresowo aktualizowana, w szczególności w przypadku
-          zmian w Aplikacji, zmian przepisów prawa lub wytycznych platformy Google Play.
-          Aktualna wersja Polityki jest zawsze dostępna pod tym adresem internetowym.
-        </p>
-      </div>
+        <div class="section">
+          <h2>8. Prawa własności intelektualnej</h2>
+          <ul>
+            <li>
+              Elementy graficzne, nazwa „Wawero”, logo oraz układ interfejsu Aplikacji podlegają
+              ochronie prawnej i nie mogą być kopiowane ani wykorzystywane bez zgody
+              Administratora.
+            </li>
+            <li>
+              Publikując treści w Aplikacji, Użytkownik udziela Administratorowi niewyłącznej,
+              nieodpłatnej licencji na ich wykorzystanie w celu wyświetlania ich w Aplikacji,
+              moderacji oraz promocji Aplikacji (np. w materiałach informacyjnych), w zakresie
+              uzasadnionym charakterem Aplikacji.
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>9. Rozwiązanie korzystania z Aplikacji</h2>
+          <ul>
+            <li>
+              Użytkownik może w każdej chwili zaprzestać korzystania z Aplikacji poprzez jej
+              odinstalowanie ze swojego urządzenia.
+            </li>
+            <li>
+              Administrator może ograniczyć lub zakończyć dostęp do Aplikacji wobec Użytkownika,
+              który rażąco narusza Regulamin lub przepisy prawa (np. poprzez publikowanie
+              treści bezprawnych lub szczególnie szkodliwych).
+            </li>
+            <li>
+              Usunięcie Aplikacji z urządzenia nie powoduje automatycznego usunięcia wszystkich
+              opublikowanych wcześniej treści – mogą one zostać usunięte na zasadach określonych
+              w Polityce prywatności i niniejszym Regulaminie.
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>10. Zmiany Regulaminu</h2>
+          <p>
+            Administrator zastrzega sobie prawo do zmiany Regulaminu w szczególności w przypadku:
+          </p>
+          <ul>
+            <li>zmian funkcjonalności Aplikacji,</li>
+            <li>zmian przepisów prawa lub wytycznych platformy (np. Google Play),</li>
+            <li>konieczności doprecyzowania postanowień.</li>
+          </ul>
+          <p class="muted">
+            Zmieniony Regulamin będzie publikowany w Aplikacji lub na stronie internetowej.
+            Korzystanie z Aplikacji po wejściu w życie zmian oznacza akceptację nowej wersji
+            Regulaminu.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>11. Kontakt</h2>
+          <p>
+            W sprawach związanych z funkcjonowaniem Aplikacji, zgłoszeniami naruszeń lub
+            pytaniami dotyczącymi Regulaminu możesz skontaktować się z nami pod adresem:
+            <strong>swarszawa06@gmail.com</strong>.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>12. Postanowienia końcowe</h2>
+          <ul>
+            <li>
+              W sprawach nieuregulowanych Regulaminem zastosowanie mają odpowiednie przepisy
+              prawa powszechnie obowiązującego na terytorium Rzeczypospolitej Polskiej.
+            </li>
+            <li>
+              Regulamin wchodzi w życie z dniem jego opublikowania w Aplikacji i obowiązuje
+              do czasu jego zmiany lub odwołania.
+            </li>
+          </ul>
+        </div>
+      </section>
     </section>
 
     <footer>
@@ -484,7 +801,41 @@
   </main>
 
   <script>
+    // Rok w stopce
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Logika przełączników
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+    const badgeLabel = document.getElementById("badge-label");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-tab");
+
+        // aktywny przycisk
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        // przełączanie treści
+        tabContents.forEach((content) => {
+          if (content.id === targetId) {
+            content.classList.remove("hidden");
+          } else {
+            content.classList.add("hidden");
+          }
+        });
+
+        // zmiana badge
+        if (badgeLabel) {
+          if (targetId === "tab-privacy") {
+            badgeLabel.textContent = "Polityka prywatności";
+          } else if (targetId === "tab-terms") {
+            badgeLabel.textContent = "Regulamin";
+          }
+        }
+      });
+    });
   </script>
 </body>
 </html>
